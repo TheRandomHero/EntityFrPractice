@@ -11,5 +11,7 @@ namespace PrototypeApi.DbModels
         public User User { get; set; }
 
         public string Content { get; set; }
+        public DateTime CreationDate { get; set; }
+
     }
 }

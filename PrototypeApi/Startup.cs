@@ -81,13 +81,14 @@ namespace PrototypeApi
                 LastName = "Griffin"
             };
             context.Users.AddRange(testUser1, testUser2, testUser3);
-            
+
 
             var testPost1 = new DbModels.Post
             {
                 Id = "cal789",
                 UserId = testUser1.Id,
-                Content = "What a piece of junk!"
+                Content = "What a piece of junk!",
+                CreationDate = DateTime.Now.AddMilliseconds(11)
             };
 
           
@@ -95,34 +96,40 @@ namespace PrototypeApi
             {
                 Id = "qwe369",
                 UserId = testUser2.Id,
-                Content = "Excellent its working"
+                Content = "Excellent its working",
+                CreationDate = DateTime.Now
             };
 
             var testPost3 = new DbModels.Post
             {
                 Id = "ewq852",
                 UserId = testUser2.Id,
-                Content = "I need a coffe after this"
+                Content = "I need a coffe after this",
+                CreationDate = DateTime.Now
             };
 
             var testPost4 = new DbModels.Post
             {
                 Id = "asd478",
                 UserId = testUser3.Id,
-                Content = "What a suprise."
+                Content = "What a suprise.",
+                CreationDate = DateTime.Now.AddMinutes(8)
             };
 
             var testPost5 = new DbModels.Post
             {
                 Id = "gfh357",
                 UserId = testUser3.Id,
-                Content = "Pancake"
+                Content = "Pancake",
+                CreationDate = DateTime.Now.AddMinutes(3)
             };
             var testPost6 = new DbModels.Post
             {
                 Id = "gfh389",
                 UserId = testUser3.Id,
-                Content = "Pancake"
+                Content = "Pancake",
+                CreationDate = DateTime.Now.AddMinutes(5)
+                
             };
             context.Posts.AddRange(testPost1, testPost2, testPost3, testPost4, testPost5, testPost6);
 

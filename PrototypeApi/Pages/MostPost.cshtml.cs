@@ -19,12 +19,30 @@ namespace PrototypeApi.Pages
             _context = context;
         }
 
-        public IList<Post> Post { get;set; }
+        public IList<User> UserPosts { get;set; }
+        public IList<Post> Posts { get; set; }
+        public string DateSort { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string sortOrder)
         {
-            Post = await _context.Posts
-                .Include(p => p.User).ToListAsync();
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+            IQueryable<Post> sortedPosts = _context.Posts;
+            var posts = _context.Users
+                .OrderByDescending(p => p.Posts.Count)
+                .Take(1);
+
+            UserPosts = await posts.ToListAsync();
+            switch (sortOrder)
+            {
+                case "Date":
+                    sortedPosts = sortedPosts.OrderBy(p => p.CreationDate);
+                    break;
+                case "date_desc":
+                    sortedPosts = sortedPosts.OrderByDescending(p => p.CreationDate);
+                    break;
+            }
+            Posts = await sortedPosts.ToListAsync();
+
         }
     }
 }
