@@ -68,17 +68,63 @@ namespace PrototypeApi
                 FirstName = "Luke",
                 LastName = "Skywalker"
             };
-
-            context.Users.Add(testUser1);
+            var testUser2 = new DbModels.User
+            {
+                Id = "tat654",
+                FirstName = "Obi-Van",
+                LastName = "Kenobi"
+            };
+            var testUser3 = new DbModels.User
+            {
+                Id = "lkj654",
+                FirstName = "Jabba",
+                LastName = "Griffin"
+            };
+            context.Users.AddRange(testUser1, testUser2, testUser3);
+            
 
             var testPost1 = new DbModels.Post
             {
-                Id = "def234",
+                Id = "cal789",
                 UserId = testUser1.Id,
                 Content = "What a piece of junk!"
             };
 
-            context.Posts.Add(testPost1);
+          
+            var testPost2 = new DbModels.Post
+            {
+                Id = "qwe369",
+                UserId = testUser2.Id,
+                Content = "Excellent its working"
+            };
+
+            var testPost3 = new DbModels.Post
+            {
+                Id = "ewq852",
+                UserId = testUser2.Id,
+                Content = "I need a coffe after this"
+            };
+
+            var testPost4 = new DbModels.Post
+            {
+                Id = "asd478",
+                UserId = testUser3.Id,
+                Content = "What a suprise."
+            };
+
+            var testPost5 = new DbModels.Post
+            {
+                Id = "gfh357",
+                UserId = testUser3.Id,
+                Content = "Pancake"
+            };
+            var testPost6 = new DbModels.Post
+            {
+                Id = "gfh389",
+                UserId = testUser3.Id,
+                Content = "Pancake"
+            };
+            context.Posts.AddRange(testPost1, testPost2, testPost3, testPost4, testPost5, testPost6);
 
             context.SaveChanges();
         }

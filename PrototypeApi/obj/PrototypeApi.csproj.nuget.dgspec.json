@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\PrototypeApi\\PrototypeApi.csproj": {}
+    "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\EntityFrPractice\\PrototypeApi\\PrototypeApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\PrototypeApi\\PrototypeApi.csproj": {
+    "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\EntityFrPractice\\PrototypeApi\\PrototypeApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\PrototypeApi\\PrototypeApi.csproj",
+        "projectUniqueName": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\EntityFrPractice\\PrototypeApi\\PrototypeApi.csproj",
         "projectName": "PrototypeApi",
-        "projectPath": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\PrototypeApi\\PrototypeApi.csproj",
+        "projectPath": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\EntityFrPractice\\PrototypeApi\\PrototypeApi.csproj",
         "packagesPath": "C:\\Users\\Miller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\PrototypeApi\\obj\\",
+        "outputPath": "C:\\Users\\Miller\\C#\\SIAssignments\\FifthWeek\\EntityFrPractice\\PrototypeApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
